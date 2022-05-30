@@ -167,6 +167,10 @@ ext {
 			projReactorIpc: "io.projectreactor.ipc:reactor-netty:0.7.15.RELEASE",
 			tomcatEmbedded: "org.apache.tomcat.embed:tomcat-embed-core:9.0.0.M25",
 	]
+	
+	javax = [
+			annotation: ""
+	]
 
 	db = [
 			mysql : "mysql:mysql-connector-java:$mysqlVersion",

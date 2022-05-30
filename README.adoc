@@ -38,3 +38,9 @@ Build it and copy dependencies into build/libs using:
 gradle clean build copyDependencies
 ----
 
+Using gradle wrappers
+---
+gradle wrapper
+./gradlew wrapper --gradle-version=4.0.1 --distribution-type=all
+gradle wrapper --gradle-version 4.0.1 --distribution-type all jar
+---

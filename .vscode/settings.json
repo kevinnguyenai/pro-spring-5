@@ -1,3 +1,28 @@
 {
-    "java.configuration.updateBuildConfiguration": "automatic"
+  "java.configuration.updateBuildConfiguration": "automatic",
+  "java.jdt.ls.java.home": "/usr/local/opt/openjdk@11",
+  "java.configuration.runtimes": [
+      {
+        "name": "JavaSE-1.8",
+        "path": "/Library/Java/JavaVirtualMachines/jdk1.8.0_231.jdk/Contents/Home",
+        "default": true
+      },
+      {
+        "name": "JavaSE-11",
+        "path": "/usr/local/opt/openjdk@11"
+      },
+      {
+        "name": "JavaSE-12",
+        "path": "/Library/Java/JavaVirtualMachines/jdk-12.jdk/Contents/Home"
+      },
+      {
+        "name": "JavaSE-17",
+        "path": "/usr/local/opt/openjdk@17"
+      },
+      {
+        "name": "JavaSE-18",
+        "path": "/usr/local/opt/openjdk@18"
+      },
+    ],
+  "java.import.gradle.enabled": true
 }
