@@ -46,3 +46,9 @@ gradle wrapper --gradle-version 4.0.1 --distribution-type all jar
 gradle wrapper --gradle-version=4.4 --distribution-type=all  -Dorg.gradle.java.home=/Library/Java/JavaVirtualMachines/jdk1.8.0_231.jdk/Contents/Home clean build jar
 java -jar -Xmx512m chapter02/hello-world/build/libs/hello-world-5.0-SNAPSHOT.jar
 ---
+
+Run Class by gradle
+---
+gradle wrapper --gradle-version=4.4 --distribution-type=all  -Dorg.gradle.java.home=/Library/Java/JavaVirtualMachines/jdk1.8.0_231.jdk/Contents/Home run
+gradle -Dorg.gradle.java.home=/Library/Java/JavaVirtualMachines/jdk1.8.0_231.jdk/Contents/Home -PmainClass=com.apress.prospring5.ch2.HelloWorldSpringDI wrapper --gradle-version=4.4 --distribution-type=all chapter02:hello-world:execute
+---

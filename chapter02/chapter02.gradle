@@ -1,11 +1,36 @@
 subprojects {
 	group 'com.apress.prospring5.ch02'
 	apply plugin: 'java'
+	apply plugin: 'application'
+
+	application {
+		mainClass = "com.apress.prospring5.ch2.HelloWorldSpringDI"
+	}
 
 	/*Task that copies all the dependencies under build/libs */
 	task copyDependencies(type: Copy) {
 		from configurations.implementation
 		into 'build/libs'
+	}
+
+	task execute(type: JavaExec) {
+   		main = project.hasProperty("mainClass") ? getProperty("mainClass") : "com.apress.prospring5.ch2.HelloWorld"
+   		classpath = sourceSets.main.runtimeClasspath
+	}
+
+	task executeBase(type: JavaExec) {
+   		main = "com.apress.prospring5.ch2.HelloWorld"
+   		classpath = sourceSets.main.runtimeClasspath
+	}
+
+	task executeDI(type: JavaExec) {
+   		main = "com.apress.prospring5.ch2.HelloWorldSpringDI"
+   		classpath = sourceSets.main.runtimeClasspath
+	}
+
+	task executeCLI(type: JavaExec) {
+   		main = "com.apress.prospring5.ch2.HelloWorldWithCommandLine"
+   		classpath = sourceSets.main.runtimeClasspath
 	}
 
 	dependencies {
