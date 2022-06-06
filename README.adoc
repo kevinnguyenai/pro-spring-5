@@ -51,4 +51,5 @@ Run Class by gradle
 ---
 gradle wrapper --gradle-version=4.4 --distribution-type=all  -Dorg.gradle.java.home=/Library/Java/JavaVirtualMachines/jdk1.8.0_231.jdk/Contents/Home run
 gradle -Dorg.gradle.java.home=/Library/Java/JavaVirtualMachines/jdk1.8.0_231.jdk/Contents/Home -PmainClass=com.apress.prospring5.ch2.HelloWorldSpringDI wrapper --gradle-version=4.4 --distribution-type=all chapter02:hello-world:execute
+gradle wrapper --gradle-version=4.4 --distribution-type=all  -Dorg.gradle.java.home=/Library/Java/JavaVirtualMachines/jdk1.8.0_231.jdk/Contents/Home -PmainClass=com.apress.prospring5.ch2.HelloWorldSpringDI -PappArg=Hello chapter02:hello-world:executeCLI 
 ---

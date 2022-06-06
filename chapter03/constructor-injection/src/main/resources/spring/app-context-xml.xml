@@ -16,4 +16,10 @@
             <value>90</value> 
         </constructor-arg> 
     </bean>
+    <bean id="constructorConfusionNew"
+        class="com.apress.prospring5.ch3.xml.ConstructorConfusion">
+        <constructor-arg>
+            <value>"Hello this is String"</value>
+        </constructor-arg>
+    </bean>
 </beans>

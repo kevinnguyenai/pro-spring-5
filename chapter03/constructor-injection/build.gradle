@@ -4,6 +4,16 @@ dependencies {
 	testImplementation tester.junit
 }
 
+task execute(type: JavaExec) {
+	main = "com.apress.prospring5.ch3.DeclareSpringComponents"
+	classpath = sourceSets.main.runtimeClasspath
+}
+
+task executeCC(type: JavaExec) {
+	main  = "com.apress.prospring5.ch3.xml.ConstructorConfusion"
+	classpath  = sourceSets.main.runtimeClasspath
+}
+
 jar {
 	manifest {
 		attributes("Created-By"         : "Iuliana Cosmina",

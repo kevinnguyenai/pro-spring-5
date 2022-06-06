@@ -20,7 +20,7 @@ public class ConstructorConfusion {
 		GenericXmlApplicationContext ctx = new GenericXmlApplicationContext();
 		ctx.load("classpath:spring/app-context-xml.xml");
 		ctx.refresh();
-		ConstructorConfusion cc = (ConstructorConfusion) ctx.getBean("constructorConfusion");
+		ConstructorConfusion cc = (ConstructorConfusion) ctx.getBean("constructorConfusionNew");
 		System.out.println(cc);
 		ctx.close();
 	}

@@ -21,6 +21,7 @@ subprojects {
 	task executeBase(type: JavaExec) {
    		main = "com.apress.prospring5.ch2.HelloWorld"
    		classpath = sourceSets.main.runtimeClasspath
+		args project.hasProperty("appArg") ? getProperty("appArg") : "NULL"
 	}
 
 	task executeDI(type: JavaExec) {
@@ -31,6 +32,19 @@ subprojects {
 	task executeCLI(type: JavaExec) {
    		main = "com.apress.prospring5.ch2.HelloWorldWithCommandLine"
    		classpath = sourceSets.main.runtimeClasspath
+		args  project.hasProperty('appArg') ? getProperty('appArg') : "NULL"
+	}
+
+	task executeAn(type: JavaExec) {
+   		main = "com.apress.prospring5.ch2.annotated.HelloWorldSpringAnnotated"
+   		classpath = sourceSets.main.runtimeClasspath
+		args  project.hasProperty('appArg') ? getProperty('appArg') : "NULL"
+	}
+
+	task executeDe(type: JavaExec) {
+   		main = "com.apress.prospring5.ch2.decoupled.HelloWorldDecoupled"
+   		classpath = sourceSets.main.runtimeClasspath
+		args  project.hasProperty('appArg') ? getProperty('appArg') : "NULL"
 	}
 
 	dependencies {
